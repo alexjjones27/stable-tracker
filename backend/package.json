@@ -41,6 +41,7 @@
     "services:sync:local": "npx tsc --sourceMap && cross-env DB_URL=mongodb://localhost:27017/sc-tracker node --enable-source-maps --env-file=.env.development dist/script/general/sync-services.js",
     "exchange-rates:sync": "npx tsc --sourceMap && node --enable-source-maps --env-file=.env.development dist/script/general/sync-exchange-rates.js",
     "exchange-rates:sync:local": "npx tsc --sourceMap && cross-env DB_URL=mongodb://localhost:27017/sc-tracker node --enable-source-maps --env-file=.env.development dist/script/general/sync-exchange-rates.js",
+    "live-sources:snapshot": "npx tsc --sourceMap && node --enable-source-maps dist/script/general/snapshot-live-sources.js",
     "db:seed": "npm run migrate:dev && npm run population:sync && npm run allium:sync:wallets",
     "db:seed:local": "npm run migrate:local && npm run population:sync:local && npm run allium:sync:wallets:local",
     "db:seed:full": "npm run db:seed && npm run stride:sync && npm run remittances:sync && npm run services:sync && npm run gdp:sync",
